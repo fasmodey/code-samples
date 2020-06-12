@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-user_name,
+.add-user_fullname,
+.add-new_user {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.user-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+td {
+    padding: 10px 30px;
+}
+
+.user-name,
+.user-nickname {
+    padding: 10px;
+}
+
+.add-new_user,
+.update-user_button,
+.delete-user_button {
+    padding: 10px 25px;
+    background-color: rgb(148, 189, 66);
+
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.add-new_user:hover,
+.update-user_button:hover,
+.delete-user_button:hover {
+    background-color: rgb(74, 163, 163);
+}
+
+.add-new_user:disabled,
+.update-user_button:disabled,
+.delete-user_button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.user-table_header {
+    font-size: 20px;
+}
+
+.user-id,
+.user-name,
+.user-nickname,
+.update-user_button,
+.delete-user_button {
+    font-size: 18px;
+}
