@@ -1,0 +1,17 @@
+.header-content__description--button,
+.footer-form__button {
+    background-color: #ff7f50;
+    border-color: #ff7f50;
+}
+
+.container-wrapper__dark {
+    background-color: #343a40;
+}
+
+.container-wrapper__white {
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background-color: #343a40;
+}

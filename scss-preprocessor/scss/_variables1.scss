@@ -1,0 +1,23 @@
+$borderRadius: 5px;
+$mainColor: #ffffff;
+$themeColor: #ffffff;
+$backgroundImage: url("../img/m-h-day.jpg");
+$contentBackground: #21232e;
+$headingsColor: #2c2f3c;
+$contentColor: #bbc3c9;
+$hindFont: 'Hind', sans-serif;
+$sourceFont: 'Source Sans Pro', sans-serif;
+$buttonColor: #699900;
+$gradientEnd: #2b59dd;
+$wordColor: #14a0c7;
+$logoFont: $hindFont;
+$mainFont: $sourceFont;
+
+$textAndHeadings-colors: (
+    card_heading: $mainColor,
+    card_text: $contentColor,
+    banner_heading: $headingsColor,
+    banner_text: $contentColor
+);
+
+$gradientColor: ("from": $buttonColor, "to": $gradientEnd);

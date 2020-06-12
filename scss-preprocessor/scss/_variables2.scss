@@ -1,0 +1,23 @@
+$borderRadius: 5px;
+$mainColor:#ffffff;
+$themeColor: #21232e;
+$backgroundImage: url("../img/m-h-night.jpg");
+$contentBackground: #3b3f50;
+$headingsColor: #ffffff;
+$contentColor: #d1d1d1;
+$hindFont: 'Hind', sans-serif;
+$sourceFont: 'Source Sans Pro', sans-serif;
+$buttonColor: #e3ac00;
+$gradientEnd: #922b54;
+$wordColor: #ff4e33;
+$logoFont: 'Fresca', sans-serif;
+$mainFont: $logoFont;
+
+$textAndHeadings-colors: (
+    card_heading: $mainColor,
+    card_text: $contentColor,
+    banner_heading: $headingsColor,
+    banner_text: $contentColor
+);
+
+$gradientColor: ("from": $buttonColor, "to": $gradientEnd);

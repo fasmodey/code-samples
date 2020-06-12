@@ -1,0 +1,256 @@
+@mixin wordAccent {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 36px;
+    background-color: $wordColor;
+}
+
+@mixin linksStyle($color, $fontFamily, $fontSize, $fontWeight) {
+    color: $color;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin buttonStyle($buttonColor, $mainColor) {
+    padding: 10px 36px;
+    background-color: $buttonColor;
+    color: $mainColor;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1300px;
+    background-color: $themeColor;
+}
+
+.header {
+    background-image: $backgroundImage;
+    min-height: 560px;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 40%;
+    background-size: cover;
+    background-position: center center;
+
+    &-wrap {
+        padding-top: 20px;
+        margin-left: 130px;
+        color: $headingsColor;
+        font-family: $sourceFont;
+
+        div:not([class]) {
+            padding-top: 24px;
+        }
+    }
+
+    &_button {
+        @include buttonStyle($buttonColor, $mainColor);
+
+    }
+
+    .login {
+        @include linksStyle($mainColor, $sourceFont, 16px, normal);
+        margin-left: 128px;
+    }
+
+    &_heading {
+        z-index: 10;
+        position: relative;
+        margin-bottom: 30px;
+        width: 400px;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1;
+
+        &::after {
+            @include wordAccent;
+            width: 210px;
+            right: 190px;
+            bottom: 0px;
+        }
+    }
+
+    &_text {
+        font-family: $mainFont;
+        font-size: 16px;
+        white-space: pre-line;
+        margin-bottom: 30px;
+    }
+}
+
+.landing-logo {
+    display: inline-block;
+    font-family: $logoFont;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+
+    img {
+        float: left;
+        width: 40px;
+        height: 40px;
+    }
+
+    p {
+        float: left;
+        margin: 0;
+        padding-left: 10px;
+        line-height: 1;
+        font-size: 26px;
+    }
+
+    span {
+        text-align: center;
+        display: block;
+        font-size: 12px;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @each $prefix, $color in $textAndHeadings-colors {
+        &_#{$prefix} {
+            color: $color;
+        }
+    }
+
+    &_text {
+        z-index: 10;
+        position: relative;
+        font-size: 30px;
+        font-family: $sourceFont;
+        font-weight: 600;
+        color: $headingsColor;
+
+        &::after {
+            @include wordAccent;
+            right: 8px;
+            width: 136px;
+            bottom: 6px;
+        }
+    }
+
+    &_card_wrap {
+        max-width: 770px;
+    }
+
+    &_card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: $contentBackground;
+    }
+
+    &_card_img {
+        border-radius: $borderRadius;
+        width: 100%;
+        height: 200px;
+    }
+
+    &_card_right_container {
+        text-align: center;
+    }
+
+    &_card_heading {
+        font-size: 20px;
+        font-family: $sourceFont;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    &_card_text {
+        padding: 0 52px;
+        padding-bottom: 10px;
+        font-family: $mainFont;
+        text-align: justify;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    &_link {
+        @include linksStyle($contentColor, $sourceFont, 16px, bold);
+    }
+
+    &_banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 820px;
+        bottom: -66px;
+        box-sizing: border-box;
+        padding: 0 80px;
+        margin-top: 34px;
+        background: linear-gradient(45deg, map-get($gradientColor, "from"), map-get($gradientColor, "to"));
+        border-radius: $borderRadius;
+    }
+
+    &_banner_button {
+        @include buttonStyle($buttonColor, $mainColor);
+    }
+
+    &_banner_text_wrap {
+        font-family: $sourceFont;
+    }
+
+    &_banner_heading {
+        position: relative;
+        padding: 20px 0;
+        margin: 0;
+        z-index: 10;
+        font-weight: 600;
+        font-size: 28px;
+
+        &::before {
+            @include wordAccent;
+            left: 108px;
+            width: 58px;
+            bottom: 24px;
+        }
+    }
+
+    &_banner_text {
+        margin: 0;
+        padding-bottom: 34px;
+    }
+}
+
+.footer {
+    font-family: $mainFont;
+    background-color: $contentBackground;
+    padding: 32px 130px;
+
+    &-wrap {
+        padding-top: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        
+    &_text {
+        box-sizing: border-box;
+        padding-left: 30px;
+        width: 330px;
+        color: $contentColor; 
+    }
+
+    &-cr {
+        color: $contentColor;
+    }
+
+    &_logo {
+        @extend .landing-logo;
+        color: $contentColor;
+    }
+}
