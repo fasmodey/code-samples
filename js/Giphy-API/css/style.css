@@ -1,0 +1,47 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1600px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #0b98aa;
+}
+
+.header,
+.main {
+    margin: 0 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#giphy-category,
+#giphy-range,
+#find-gifs {
+    padding: 10px 15px;
+    font-size: 22px;
+
+}
+
+.gif-container {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 6px;
+}
+
+.gif-container__image {
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.footer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

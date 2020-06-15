@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Giphy App</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Giphy App</h1>
+        <form action="#" method="get" id="search-form">
+            <input type="search" name="category" id="giphy-category" placeholder="Найти гифки" required>
+            <input type="text" name="range" id="giphy-range" placeholder="Гифок к отображению">
+            <input type="submit" value="Найти" id="find-gifs">
+        </form>
+    </header>
+
+    <main class="main">
+        <article class="gif-container">
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <h3 class="footer-title">Разработано с помощью GIPHY API</h3>
+        <a href="https://developers.giphy.com/docs/sdk" class="giphy-api-logo">
+            <img src="image/giphy-logo.gif" alt="Giphy API page" class="giphy-api-logo">
+        </a>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
