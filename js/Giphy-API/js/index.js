@@ -2,7 +2,7 @@ const find = document.querySelector('#find-gifs');
 const giphyCategory = document.querySelector('#giphy-category');
 const gifImg = document.querySelector('.gif-img');
 const apiKey = 'BaLjHvygJkENnTTiOZvjvNywdlvxuIZV';
-let url = 'http://api.giphy.com/v1/gifs/';
+let url = 'https://api.giphy.com/v1/gifs/';
 
 find.addEventListener('click', (event) => {
     const data = giphyCategory.value;
