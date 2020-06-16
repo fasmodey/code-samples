@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon.png">
     <link rel="stylesheet" href="css/style.css">
-    <title>Giphy</title>
+    <title>Giphy App</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">Giphy App</h1>
+        <h1 id="app-header__title" class="header-title">Giphy App</h1>
+
         <form action="#" method="get" id="search-form">
-            <input type="search" name="category" id="giphy-category" placeholder="Найти гифки" required>
-            <input type="text" name="range" id="giphy-range" placeholder="Гифок к отображению">
+            <input type="search" name="category" id="giphy-category" placeholder="Категория" required>
             <input type="submit" value="Найти" id="find-gifs">
         </form>
     </header>
@@ -22,8 +23,12 @@
         <article class="gif-container">
 
         </article>
-    </main>
 
+        <input type="button" value="Показать еще 30 гифок" id="add-gifs" class="hidden">
+
+    </main>
+    <a href="#app-header__title" class="up hidden"><i class="fas fa-angle-double-up"></i></a>
+    
     <footer class="footer">
         <h3 class="footer-title">Разработано с помощью GIPHY API</h3>
         <a href="https://developers.giphy.com/docs/sdk" class="giphy-api-logo">

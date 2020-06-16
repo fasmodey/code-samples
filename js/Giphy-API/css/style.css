@@ -4,6 +4,7 @@ body {
     max-width: 1600px;
     font-family: 'Work Sans', sans-serif;
     background-color: #0b98aa;
+    text-align: center;
 }
 
 .header,
@@ -17,9 +18,22 @@ body {
     align-items: center;
 }
 
+.main {
+    text-align: center;
+}
+
+#add-gifs {
+    margin-top: 30px;
+}
+
+.gifs-count,
+.gifs-not-found {
+    text-align: center;
+}
+
 #giphy-category,
-#giphy-range,
-#find-gifs {
+#find-gifs,
+#add-gifs {
     padding: 10px 15px;
     font-size: 22px;
 
@@ -44,4 +58,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (max-width: 729px) {
+    #search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: stretch;
+    }
+
+    #search-form input {
+        margin-top: 8px;
+    }
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+.up {
+    display: inline-block;
+    padding: 16px 22px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #ffffff;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 40px;
+}
+
+.up:hover {
+    color: blueviolet;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: inline-block;
 }
